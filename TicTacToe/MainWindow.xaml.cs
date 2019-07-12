@@ -40,12 +40,17 @@ namespace TicTacToe
             val[y] = z;
             if ((val[0] == val[1] && val[0] == val[2] && val[0] == 2) || (val[0] == val[3] && val[0] == val[6] && val[0] == 2) || (val[4] == val[0] && val[0] == val[8] && val[0] == 2) || (val[1] == val[4] && val[1] == val[7] && val[1] == 2) || (val[2] == val[5] && val[2] == val[8] && val[2] == 2) || (val[3] == val[4] && val[3] == val[5] && val[3] == 2) || (val[6] == val[4] && val[6] == val[2] && val[6] == 2) || (val[6] == val[7] && val[6] == val[8] && val[6] == 2))
             {
-                MessageBox.Show("Pobijedio je X");
+                MessageBox.Show("Pobijedio je X!");
                 Application.Current.Shutdown();
             }
             if ((val[0] == val[1] && val[0] == val[2] && val[0] == 1) || (val[0] == val[3] && val[0] == val[6] && val[0] == 1) || (val[4] == val[0] && val[0] == val[8] && val[0] == 1) || (val[1] == val[4] && val[1] == val[7] && val[1] == 1) || (val[2] == val[5] && val[2] == val[8] && val[2] == 1) || (val[3] == val[4] && val[3] == val[5] && val[3] == 1) || (val[6] == val[4] && val[6] == val[2] && val[6] == 1) || (val[6] == val[7] && val[6] == val[8] && val[6] == 1))
             {
-                MessageBox.Show("Pobijedio je O");
+                MessageBox.Show("Pobijedio je O!");
+                Application.Current.Shutdown();
+            }
+            if(Counters.brojac(0)==10)
+            {
+                MessageBox.Show("Nema pobjednika!");
                 Application.Current.Shutdown();
             }
         }
